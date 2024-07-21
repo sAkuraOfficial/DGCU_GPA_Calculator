@@ -6,7 +6,7 @@
 <br />
 
 <p align="center">
-  <a href="https://github.com/shaojintian/Best_README_template/">
+  <a href="https://github.com/sAkuraOfficial/DGCU_GPA_Calculator">
     <img src="doc/images/logo.png" alt="Logo" width="150" height="150">
   </a>
   <h3 align="center">东莞城市学院绩点计算器</h3>
@@ -20,11 +20,11 @@
     <img src="https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white" alt="CMAKE">
     <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="GIT">
     <br/>
-    <a href="https://github.com/shaojintian/Best_README_template">查看Demo</a>
+    <a href="https://github.com/sAkuraOfficial/DGCU_GPA_Calculator/releases/tag/v1.0">立即下载</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">报告Bug</a>
+    <a href="https://github.com/sAkuraOfficial/DGCU_GPA_Calculator/issues">报告Bug</a>
     ·
-    <a href="https://github.com/shaojintian/Best_README_template/issues">提出新特性</a>
+    <a href="https://github.com/sAkuraOfficial/DGCU_GPA_Calculator/issues">提出新特性</a>
   </p>
 </p>
 
@@ -45,7 +45,8 @@
 
 ###### 如何下载安装
 
-等待更新
+[国内:蓝奏云线路](https://haohao159.lanzouo.com/iYCOx256f3zc)
+[国际:Github线路](https://github.com/sAkuraOfficial/DGCU_GPA_Calculator/releases/download/v1.0/installer.exe)
 
 ###### 开发前的配置要求
 
@@ -66,6 +67,27 @@
 git clone https://github.com/sAkuraOfficial/DGCU_GPA_Calculator.git
 cd ./DGCU_GPA_Calculator
 vcpkg install
+```
+
+###### 打包项目
+
+1. 开始菜单中打开`Qt 6.7.2 (MSVC 2019 64-bit)`命令行
+2. 配置`MSVC`环境:
+```powershell
+"D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvarsall.bat" amd64
+```
+3. 使用`windeployqt.exe`进行打包
+```powershell
+windeployqt.exe --no-quick-import --no-translations --no-system-d3d-compiler --no-system-dxc-compiler --no-opengl-sw --add-plugin-types styles,platforms,imageformats --skip-plugin-types qmltooling,generic --no-compiler-runtime --exclude-plugins qsvg,svgwidgets,qsvgicon ./DGCU_GPA_Calculator.exe
+```
+
+###### 安装包制作
+1. 将打包好后的文件,放入`installer/packages/com.sAkuraOfficial.DGCU_GPA_Calculator/data`目录
+2. 使用`Qt Installer Framework`进行安装包制作
+
+命令参考:
+```powershell
+D:\Dev_Files\Qt\Tools\QtInstallerFramework\4.8\bin\binarycreator.exe" -c config/config.xml -p packages 东莞城市学院绩点计算器安装包.exe
 ```
 
 

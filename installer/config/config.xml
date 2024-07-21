@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Installer>
+    <Name>东莞城市学院绩点计算器</Name>
+    <Version>1.0.0</Version>
+    <Title>东莞城市学院绩点计算器</Title>
+    <Publisher>sAkuraOfficial</Publisher>
+    <StartMenuDir>东莞城市学院绩点计算器</StartMenuDir>
+    <TargetDir>@HomeDir@/DGCU_GPA_Calculator</TargetDir>
+    <InstallerWindowIcon>logo.png</InstallerWindowIcon>
+</Installer>
